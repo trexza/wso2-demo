@@ -1,0 +1,26 @@
+server:
+  port: 8443
+  contextPath: /authdemo
+  ssl:
+    key-alias: selfsigned
+    key-password: wso2test
+    key-store: classpath:keystore.jks
+    key-store-provider: SUN
+    key-store-type: JKS
+wso2:
+  client:
+    clientId: eTCW9fQcZOd7SGdnD_nErTNsWsYa
+    clientSecret: aZjVS8YCqN66Z63QwMfmJTk6ZmQa
+    accessTokenUri: https://localhost:8244/token
+    userAuthorizationUri: https://localhost:9444/oauth2/authorize
+    tokenName: oauth_token
+    scope: openid
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+    preEstablishedRedirectUri: https://localhost:8443/login/wso2
+  resource:
+    userInfoUri: https://localhost:9444/oauth2/userinfo?schema=openid
+
+logging:
+  level:
+    org.springframework.security: DEBUG

@@ -1,0 +1,35 @@
+server:
+  port: 8081
+  contextPath: /ssotest
+  ssl:
+    key-alias: selfsigned
+    key-password: wso2test
+    key-store: classpath:keystore.jks
+    key-store-provider: SUN
+    key-store-type: JKS
+ssotest:
+  client:
+    clientId: FFuZejzu2YBqWnnr1ay93OrvF6wa
+    clientSecret: 7i1iR16PdeZS_K1I1ZhQmfn0JIMa
+    accessTokenUri: https://localhost:8244/token
+    userAuthorizationUri: https://localhost:9444/oauth2/authorize
+    tokenName: oauth_token
+    scope: openid
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+    preEstablishedRedirectUri: https://localhost:8081/ssotest/login/wso2
+  resource:
+    userInfoUri: https://localhost:9444/oauth2/userinfo?schema=openid
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+        type: trace

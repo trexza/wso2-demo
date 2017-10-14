@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  contextPath: /app
+facebook:
+  client:
+    clientId: 497339693952849
+    clientSecret: e12578f20409c20b265f137d7b2f5a6b
+    accessTokenUri: https://graph.facebook.com/oauth/access_token
+    userAuthorizationUri: https://www.facebook.com/dialog/oauth
+    tokenName: oauth_token
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://graph.facebook.com/me
+
+logging:
+  level:
+    org.springframework.security: DEBUG
