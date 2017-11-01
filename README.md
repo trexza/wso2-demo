@@ -17,8 +17,8 @@ Demo app for this feature is app1-oauth-securityprovider. It is a spring boot ap
 This will demonstrate the use of OAuth2 authorisation for single-signon. It is an extension of the previous demo, so it will work only if authorisation flow is successful. The second demo application app2-oauth-serviceprovider is required for this scenario.
 1. Repeat step 1 and step 2 described in Demo1 for this spring application
 2. The certificate created previously can be reused. Update application.yml with the keystore password and class path.
-3. Run the client application and try accessing https://<host>:<port>/<contextPath>/v1/persons. It will redirect to the login page. To verify SSO, do not login into this application. **NOTE:** If the browser has a valid auth session from previous demo, the xml response will be displayed due to SSO behaviour.
-4. Open another browser tab and login to application that was running from Demo 1. Try https://<host>:<port>/<contextPath>/v1/persons. The xml response will be displayed without login redirection.
+3. Run the client application and try accessing https://[host]:[port]/[contextPath]/v1/persons. It will redirect to the login page. To verify SSO, do not login into this application. **NOTE:** If the browser has a valid auth session from previous demo, the xml response will be displayed due to SSO behaviour.
+4. Open another browser tab and login to application that was running from Demo 1. Try https://[host]:[port]/[contextPath]/v1/persons. The xml response will be displayed without login redirection.
 
 
 **More to come**
